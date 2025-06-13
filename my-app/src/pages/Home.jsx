@@ -6,10 +6,13 @@ export default function Home() {
     return (
         <div className='flex-col max-w-4xl mx-auto p-6 justify-between justify-items-center align-middle text-gray-800'>
             <h1 className='text-4xl font-bold mb-4 text-center'>
-                Hello, Welcome to Campus Club Finder
+                Campus Club Finder
             </h1>
+            <p className='text-2xl mb-4 text-justify '>
+                Hello, welcome to Campus Club Finder. In this website, students can explore and connect with various clubs on campus
+            </p>
             <img
-                src="public/image/coding.jpg"
+                src="/images/coding.jpg"
                 alt="Coding club"
                 className="w-full h-auto rounded-lg shadow-md mb-6"
             />
