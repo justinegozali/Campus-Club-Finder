@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Clubs from './pages/Clubs';
 import ClubDetail from './pages/ClubDetail';
 import About from './pages/About';
+import Error from './pages/Error';
 
 export default function App() {
     return (
@@ -16,6 +17,7 @@ export default function App() {
                     <Route path="/clubs" element={<Clubs />} />
                     <Route path="/clubs/:clubId" element={<ClubDetail />} />
                     <Route path="/about" element={<About />} />
+                    <Route path="*" element={< Error />} />
                 </Routes>
             </div>
         </Router>
