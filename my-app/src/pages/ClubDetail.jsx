@@ -9,15 +9,15 @@ export default function ClubDetail() {
   const [joined, setJoined] = useState(false);
 
   useEffect(() => {
-    const joinedClubs = JSON.parse(localStorage.getItem('joinedClubs')) || [];
+    const joinedClubs = JSON.parse(sessionStorage.getItem('joinedClubs')) || [];
     setJoined(joinedClubs.includes(clubId));
   }, [clubId]);
 
   const handleJoin = () => {
-    const joinedClubs = JSON.parse(localStorage.getItem('joinedClubs')) || [];
+    const joinedClubs = JSON.parse(sessionStorage.getItem('joinedClubs')) || [];
     if (!joinedClubs.includes(clubId)) {
       joinedClubs.push(clubId);
-      localStorage.setItem('joinedClubs', JSON.stringify(joinedClubs));
+      sessionStorage.setItem('joinedClubs', JSON.stringify(joinedClubs));
       setJoined(true);
       alert(`You've joined the ${club.name}!`);
     }
@@ -45,12 +45,12 @@ export default function ClubDetail() {
       {!joined ? (
         <button
           onClick={handleJoin}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          className="px-4 py-2 rounded bg-gray-800 text-white hover:bg-yellow-500 hover:text-gray-800"
         >
           Join Club
         </button>
       ) : (
-        <p className="text-green-600 font-medium">You have joined this club!</p>
+        <p className="text-gray-800 font-medium">You have joined this club!</p>
       )}
     </div>
   );
