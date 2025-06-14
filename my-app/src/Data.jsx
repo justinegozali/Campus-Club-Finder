@@ -24,7 +24,7 @@ export const clubs = [
   {
     id: 'literature',
     name: 'Literature Club',
-    image: '/images/literature.jpg',
+    image: '/images/literature.gif',
     shortDescription: 'Dive into classic and contemporary literature.',
     description: 'Join weekly discussions, writing challenges, and author meetups to expand your literary horizons.',
     events: [
